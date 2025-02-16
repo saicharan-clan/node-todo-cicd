@@ -7,6 +7,6 @@ hooks:
       runas: ubuntu
 
   AfterInstall:
-    - location: scripts/pull_docker_image.sh
+    - location: scripts/start_container.sh
       timeout: 300
       runas: ubuntu
