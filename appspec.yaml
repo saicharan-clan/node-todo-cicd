@@ -1,0 +1,12 @@
+version: 0.0
+os: linux
+hooks:
+  BeforeInstall:
+    - location: scripts/stop_container.sh
+      timeout: 300
+      runas: ubuntu
+
+  AfterInstall:
+    - location: scripts/pull_docker_image.sh
+      timeout: 300
+      runas: ubuntu
